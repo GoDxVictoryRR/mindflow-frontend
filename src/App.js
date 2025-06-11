@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { fetchMindMap } from "./api";
+import MindMap from "./components/MindMap";
 
 function App() {
+  const [text, setText] = useState("");
+  const [graphData, setGraphData] = useState(null);
+
+  const handleGenerate = async () => {
+    const result = await fetchMindMap(text);
+    setGraphData(result);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+      <h1>🧠 GPT-Based Mind Map Generator</h1>
+      <textarea
+        rows={6}
+        cols={60}
+        placeholder="Enter a paragraph of text..."
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
+      <br />
+      <button onClick={handleGenerate} style={{ marginTop: "1rem" }}>
+        Generate Mind Map
+      </button>
+      <div style={{ marginTop: "2rem" }}>
+        {graphData && <MindMap nodes={graphData.nodes} edges={graphData.edges} />}
+      </div>
     </div>
   );
 }
