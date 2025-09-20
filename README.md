@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# 🌐 MindFlow – Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](#license)  
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](#)  
+[![GitHub Stars](https://img.shields.io/github/stars/GoDxVictoryRR/mindflow-frontend)](#)  
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+> **MindFlow** is an AI-powered app that converts unstructured text into an **interactive mind map**.  
+This repository contains the **React frontend**.  
+👉 The Flask + Google Gemini backend is maintained separately: [mindflow-backend](https://github.com/GoDxVictoryRR/mindflow-backend)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 📝 Text input box for paragraphs/notes  
+- 🌳 AI-generated **mind map visualization** (from backend API)  
+- 🎨 Interactive UI: expand, collapse, drag nodes  
+- ⚡ Responsive design (desktop + mobile)  
+- 🔗 Communicates with Flask backend API  
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+- **React** (Frontend framework)  
+- **JavaScript (ES6)**  
+- **CSS / Tailwind (if you add it)**  
+- **REST API** → Flask + Google Gemini (backend repo)  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+mindflow-frontend/
+├── public/ # Static assets
+├── src/
+│ ├── components/ # Reusable React components
+│ ├── styles/ # CSS / styling
+│ └── App.js # Entry point
+├── package.json
+├── .gitignore
+└── README.md
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚙️ Setup & Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. Clone repo
+```bash
+git clone https://github.com/GoDxVictoryRR/mindflow-frontend.git
+cd mindflow-frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Install dependencies
+npm install
 
-## Learn More
+3. Configure backend URL
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create a .env file in the root directory:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+REACT_APP_BACKEND_URL=http://localhost:5000
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+(or the deployed backend URL)
 
-### Analyzing the Bundle Size
+4. Start development server
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+App runs at: http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🎯 Usage
 
-### Advanced Configuration
+Run the backend (mindflow-backend
+)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Start this frontend (npm start)
 
-### Deployment
+Paste text into the input area
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Press Generate Map → See AI-generated mind map
 
-### `npm run build` fails to minify
+🔭 Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ Dark mode 🎨
+
+ Export mind maps (PNG/PDF)
+
+ Animations for node transitions
+
+ Better error handling if backend is offline
+
+🤝 Contributing
+
+Contributions are welcome!
+
+Open issues for bugs/feature requests
+
+Fork & PR with enhancements
+
+📄 License
+
+Licensed under the MIT License. See LICENSE
+.
+
+🔗 Related Repos
+
+Backend: mindflow-backend
+ (Flask + Gemini API)
