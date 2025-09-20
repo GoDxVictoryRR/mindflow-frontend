@@ -1,7 +1,10 @@
 # 🧠 MindFlow Frontend
 
-A modern, responsive frontend for **MindFlow**, an AI-powered text assistant that connects to the backend (Flask + Google Gemini API).  
-This project is built with **React** and communicates with the backend to process user inputs.
+
+> **MindFlow** is an AI-powered app that converts unstructured text into an **interactive mind map**.  
+> This repository contains the **React frontend** of the project.  
+> 👉 The Flask + Google Gemini backend is maintained separately here: https://github.com/GoDxVictoryRR/mindflow-backend
+
 
 ---
 
