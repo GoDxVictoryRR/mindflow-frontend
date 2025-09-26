@@ -79,12 +79,6 @@ Contributions are welcome!
 
 ---
 
-## 📜 License
-This project is licensed under the **MIT License**.  
-Feel free to use, modify, and distribute as per the license.
-
----
-
 ## 🌟 Acknowledgements
 - [React](https://reactjs.org/)  
 - [Flask](https://flask.palletsprojects.com/)  
